@@ -300,7 +300,20 @@ footer{background:var(--gd);padding:32px 0 20px}
         <li><a href="#about">About</a></li>
         <li><a href="#features">Benefits</a></li>
         <li><a href="#workshops">Workshops</a></li>
-        <li><a href="#impact">Impact</a></li>
+  
+      <li class="nav-drop" id="impactDrop">
+  <span>Impact <i class="fas fa-chevron-down"></i></span>
+  <div class="drop-panel">
+    <a href="#impact"><i class="fas fa-circle"></i>Overview</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Unsung heroes</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Volunteering</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Village interventions</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Sessions</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Meetups</a>
+    <a href="#impact"><i class="fas fa-circle"></i>Residential camps</a>
+  </div>
+</li>
+  
         <li><a href="#upcoming">Initiatives</a></li>
         <li><a href="#apply">Apply</a></li>
         <li><a href="#faq">FAQ</a></li>
@@ -316,7 +329,17 @@ footer{background:var(--gd);padding:32px 0 20px}
     <a href="#about" onclick="closeMob()">About</a>
     <a href="#features" onclick="closeMob()">Benefits</a>
     <a href="#workshops" onclick="closeMob()">Workshops</a>
-    <a href="#impact" onclick="closeMob()">Impact</a>
+    
+  <a href="#impact" onclick="closeMob()">Impact</a>
+<div class="mob-sub">
+  <a href="#impact" onclick="closeMob()">— Unsung heroes</a>
+  <a href="#impact" onclick="closeMob()">— Volunteering</a>
+  <a href="#impact" onclick="closeMob()">— Village interventions</a>
+  <a href="#impact" onclick="closeMob()">— Sessions</a>
+  <a href="#impact" onclick="closeMob()">— Meetups</a>
+  <a href="#impact" onclick="closeMob()">— Residential camps</a>
+</div>
+    
     <a href="#upcoming" onclick="closeMob()">Initiatives</a>
     <a href="#apply" onclick="closeMob()">Apply</a>
     <a href="#faq" onclick="closeMob()">FAQ</a>
@@ -834,6 +857,19 @@ const ham=document.getElementById('ham'),mob=document.getElementById('mobmenu');
 ham.addEventListener('click',()=>mob.classList.toggle('open'));
 function closeMob(){mob.classList.remove('open')}
 
+// Impact dropdown
+const dropEl=document.getElementById('impactDrop');
+dropEl.querySelector('span').addEventListener('click',(e)=>{
+  e.stopPropagation();
+  dropEl.classList.toggle('open');
+});
+document.addEventListener('click',(e)=>{
+  if(!dropEl.contains(e.target))dropEl.classList.remove('open');
+});
+dropEl.querySelectorAll('.drop-panel a').forEach(a=>{
+  a.addEventListener('click',()=>dropEl.classList.remove('open'));
+});
+  
 // Scroll animations with IntersectionObserver
 const io=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
