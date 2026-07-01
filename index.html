@@ -76,7 +76,13 @@ img{max-width:100%;display:block;object-fit:cover}
 /* ---- NAVBAR ---- */
 #nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(245,242,235,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(74,124,63,.1);transition:box-shadow .3s}
 #nav.scrolled{box-shadow:0 2px 20px rgba(74,124,63,.12)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+.nav-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:60px;
+    width:100%;
+}
 .nav-logo{font-size:1rem;font-weight:900;color:var(--gd);letter-spacing:-.01em}
 .nav-logo span{color:var(--g)}
 .nav-links{display:flex;gap:26px;align-items:center}
@@ -371,7 +377,6 @@ footer{background:var(--gd);padding:32px 0 20px}
     grid-template-columns:1fr;
   }
 
-}
 }
 @media(max-width:480px){
   .feat-grid{grid-template-columns:1fr}
