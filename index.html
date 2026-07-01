@@ -202,6 +202,26 @@ img{max-width:100%;display:block;object-fit:cover}
 .up-card h4{font-size:.82rem;font-weight:800;color:var(--gd);margin-bottom:6px;line-height:1.35}
 .up-card p{font-size:.73rem;color:var(--txs);line-height:1.55}
 
+/* ---- TESTIMONIAL SLIDER ---- */
+#testi-slider{background:var(--g);padding:70px 0;overflow:hidden}
+.slider-wrap{max-width:700px;margin:0 auto;position:relative}
+.slider-track{display:flex;transition:transform .6s cubic-bezier(.22,.68,0,1.2)}
+.slide{flex:0 0 100%;text-align:center;padding:0 10px}
+.slide .t-avatar{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:1.1rem;margin:0 auto 14px}
+.slide .testi-quote{font-family:'Lora',serif;font-style:italic;font-size:clamp(1rem,2vw,1.25rem);color:rgba(255,255,255,.92);line-height:1.75;margin-bottom:20px;min-height:110px}
+.slide .t-name{font-weight:700;color:#fff;font-size:.9rem}
+.slide .t-role{font-size:.75rem;color:rgba(255,255,255,.7);margin-top:2px}
+.slider-dots{display:flex;justify-content:center;gap:8px;margin-top:32px}
+.slider-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);cursor:pointer;transition:all .3s;border:none;padding:0}
+.slider-dot.active{background:#fff;width:22px;border-radius:5px}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s;font-size:.85rem}
+.slider-arrow:hover{background:rgba(255,255,255,.3)}
+.slider-arrow.prev{left:-52px}
+.slider-arrow.next{right:-52px}
+@media(max-width:768px){
+  .slider-arrow{display:none}
+}
+  
 /* ---- APPLY ---- */
 #apply{background:var(--bg)}
 .apply-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start;margin-top:40px}
@@ -605,23 +625,46 @@ footer{background:var(--gd);padding:32px 0 20px}
   </div>
 </section>
 
-<!-- TESTIMONIAL GREEN BAND -->
-<section id="testi">
+<!-- TESTIMONIAL SLIDER -->
+<section id="testi-slider">
   <div class="container">
-    <div class="testi-inner">
-      <div class="testi-author anim-fade">
-        <div class="t-avatar">P</div>
-        <div>
+    <div class="slider-wrap anim-up">
+      <button class="slider-arrow prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-arrow next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+
+      <div class="slider-track" id="sliderTrack">
+
+        <div class="slide">
+          <div class="t-avatar">S</div>
+          <p class="testi-quote">"The Sakha Fellowship is a turning point in my life. It helped me find a sense of dedication to be a part of motivation to lots of people around me."</p>
           <div class="t-name">Suraj Kori</div>
           <div class="t-role">Fellow, Batch 2025</div>
         </div>
+
+        <div class="slide">
+          <div class="t-avatar">R</div>
+          <p class="testi-quote">"Placeholder testimonial — replace with a real quote from a second fellow about their experience in the fellowship."</p>
+          <div class="t-name">Fellow Name</div>
+          <div class="t-role">Fellow, Batch 2025</div>
+        </div>
+
+        <div class="slide">
+          <div class="t-avatar">A</div>
+          <p class="testi-quote">"Placeholder testimonial — replace with a real quote from a third fellow highlighting a specific project or workshop."</p>
+          <div class="t-name">Fellow Name</div>
+          <div class="t-role">Fellow, Batch 2026</div>
+        </div>
+
+        <div class="slide">
+          <div class="t-avatar">M</div>
+          <p class="testi-quote">"Placeholder testimonial — replace with a real quote from a fourth fellow about community impact or mentorship."</p>
+          <div class="t-name">Fellow Name</div>
+          <div class="t-role">Fellow, Batch 2026</div>
+        </div>
+
       </div>
-      <p class="testi-quote anim-up">"The Sakha Fellowship is a turning point in my life. It helped me find a sense of dedication to be a part of motivation to lots of people around me."</p>
-      <div class="testi-stats">
-        <div class="t-stat anim-up d1"><div class="n"><span class="counter2" data-target="40">0</span>+</div><div class="l">Fellows Transformed</div></div>
-        <div class="t-stat anim-up d2"><div class="n"><span class="counter2" data-target="65">0</span>+</div><div class="l">Community Hours</div></div>
-        <div class="t-stat anim-up d3"><div class="n">98%</div><div class="l">Satisfaction Rate</div></div>
-      </div>
+
+      <div class="slider-dots" id="sliderDots"></div>
     </div>
   </div>
 </section>
