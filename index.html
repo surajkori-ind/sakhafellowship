@@ -90,6 +90,21 @@ img{max-width:100%;display:block;object-fit:cover}
 .mob-menu.open{display:flex}
 .mob-menu a{padding:10px 0;font-size:.9rem;font-weight:600;color:var(--txm);border-bottom:1px solid var(--bgs)}
 
+/* ---- IMPACT DROPDOWN ---- */
+.nav-drop{position:relative}
+.nav-drop>span{display:flex;align-items:center;gap:5px;cursor:pointer;font-size:0.8rem;font-weight:600;color:var(--txm);transition:color .2s}
+.nav-drop>span:hover{color:var(--g)}
+.nav-drop>span i{font-size:.65rem;transition:transform .2s}
+.nav-drop.open>span i{transform:rotate(180deg)}
+.nav-drop.open>span{color:var(--g)}
+.drop-panel{position:absolute;top:calc(100% + 14px);left:50%;transform:translateX(-50%) translateY(-6px);background:var(--white);border-radius:var(--r);box-shadow:0 18px 40px rgba(46,82,38,.16);min-width:230px;padding:8px;opacity:0;visibility:hidden;transition:opacity .18s ease,transform .18s ease,visibility .18s;z-index:999}
+.nav-drop.open .drop-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+.drop-panel a{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:8px;font-size:.78rem;font-weight:600;color:var(--txm)}
+.drop-panel a:hover{background:var(--bg);color:var(--g)}
+.drop-panel a i{color:var(--gl);font-size:.55rem;width:14px}
+.mob-sub{display:flex;flex-direction:column;padding-left:14px}
+.mob-sub a{border-bottom:none!important;padding:7px 0!important;font-size:.82rem!important;color:var(--txs)!important}
+
 /* ---- HERO ---- */
 #hero{min-height:100vh;background:var(--bg);display:flex;align-items:center;padding-top:60px;position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;width:100%}
@@ -301,16 +316,16 @@ footer{background:var(--gd);padding:32px 0 20px}
         <li><a href="#features">Benefits</a></li>
         <li><a href="#workshops">Workshops</a></li>
   
-      <li class="nav-drop" id="impactDrop">
+<li class="nav-drop" id="impactDrop">
   <span>Impact <i class="fas fa-chevron-down"></i></span>
   <div class="drop-panel">
-    <a href="#impact"><i class="fas fa-circle"></i>Overview</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Unsung heroes</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Volunteering</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Village interventions</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Sessions</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Meetups</a>
-    <a href="#impact"><i class="fas fa-circle"></i>Residential camps</a>
+    <a href="impact.html"><i class="fas fa-circle"></i>Overview</a>
+    <a href="impact.html#unsung-heroes"><i class="fas fa-circle"></i>Unsung Heroes</a>
+    <a href="impact.html#volunteering"><i class="fas fa-circle"></i>Volunteering</a>
+    <a href="impact.html#village-interventions"><i class="fas fa-circle"></i>Village Interventions</a>
+    <a href="impact.html#sessions"><i class="fas fa-circle"></i>Sessions</a>
+    <a href="impact.html#meetups"><i class="fas fa-circle"></i>Meetups</a>
+    <a href="impact.html#residential-camps"><i class="fas fa-circle"></i>Residential Camps</a>
   </div>
 </li>
   
@@ -330,14 +345,14 @@ footer{background:var(--gd);padding:32px 0 20px}
     <a href="#features" onclick="closeMob()">Benefits</a>
     <a href="#workshops" onclick="closeMob()">Workshops</a>
     
-  <a href="#impact" onclick="closeMob()">Impact</a>
+<a href="impact.html" onclick="closeMob()">Impact</a>
 <div class="mob-sub">
-  <a href="#impact" onclick="closeMob()">— Unsung heroes</a>
-  <a href="#impact" onclick="closeMob()">— Volunteering</a>
-  <a href="#impact" onclick="closeMob()">— Village interventions</a>
-  <a href="#impact" onclick="closeMob()">— Sessions</a>
-  <a href="#impact" onclick="closeMob()">— Meetups</a>
-  <a href="#impact" onclick="closeMob()">— Residential camps</a>
+  <a href="impact.html#unsung-heroes" onclick="closeMob()">— Unsung Heroes</a>
+  <a href="impact.html#volunteering" onclick="closeMob()">— Volunteering</a>
+  <a href="impact.html#village-interventions" onclick="closeMob()">— Village Interventions</a>
+  <a href="impact.html#sessions" onclick="closeMob()">— Sessions</a>
+  <a href="impact.html#meetups" onclick="closeMob()">— Meetups</a>
+  <a href="impact.html#residential-camps" onclick="closeMob()">— Residential Camps</a>
 </div>
     
     <a href="#upcoming" onclick="closeMob()">Initiatives</a>
