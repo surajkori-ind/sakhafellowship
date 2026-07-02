@@ -146,8 +146,21 @@ img{max-width:100%;display:block;object-fit:cover}
 .h-stat .n{font-size:1.9rem;font-weight:900;color:var(--tx)}
 .h-stat .l{font-size:.72rem;color:var(--txs);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
 @media(max-width:768px){
-  .hero-stats-row{gap:26px}
-  .h-stat{min-width:90px}
+  .hero-stats-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px 12px;
+  }
+  .h-stat{
+    min-width:0;
+    align-items:center;
+    text-align:center;
+  }
+  .h-stat-icon{
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
 }
   
 /* ---- ABOUT ---- */
