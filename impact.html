@@ -573,6 +573,35 @@ const cio=new IntersectionObserver((entries)=>{
 },{threshold:0.5});
 document.querySelectorAll('.counter,.counter2').forEach(el=>cio.observe(el));
 
+// Track image sliders
+document.querySelectorAll('[data-track-slider]').forEach(box=>{
+  const track=box.querySelector('.track-slides');
+  const imgs=track.querySelectorAll('img');
+  const dotsWrap=box.querySelector('.track-dots');
+  let idx=0;
+
+  imgs.forEach((_,i)=>{
+    const dot=document.createElement('button');
+    dot.classList.add('track-dot');
+    if(i===0)dot.classList.add('active');
+    dot.addEventListener('click',()=>go(i));
+    dotsWrap.appendChild(dot);
+  });
+  const dots=dotsWrap.querySelectorAll('.track-dot');
+
+  function go(i){
+    idx=(i+imgs.length)%imgs.length;
+    track.style.transform=`translateX(-${idx*100}%)`;
+    dots.forEach(d=>d.classList.remove('active'));
+    dots[idx].classList.add('active');
+  }
+  function next(){go(idx+1)}
+
+  let timer=setInterval(next,4000);
+  box.addEventListener('mouseenter',()=>clearInterval(timer));
+  box.addEventListener('mouseleave',()=>{timer=setInterval(next,4000)});
+});
+  
 // Testimonial Slider
 const track=document.getElementById('sliderTrack');
 const slides=track.querySelectorAll('.slide');
