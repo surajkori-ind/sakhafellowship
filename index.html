@@ -137,6 +137,19 @@ img{max-width:100%;display:block;object-fit:cover}
 .hero-float-card .sm{font-size:.72rem;color:var(--txs);line-height:1.4;margin-top:2px}
 .hero-dot-bg{position:absolute;top:20px;left:0;width:140px;height:140px;background-image:radial-gradient(var(--gl) 1.5px,transparent 1.5px);background-size:14px 14px;opacity:.2;border-radius:8px}
 
+/* ---- HERO STATS (icon cards) ---- */
+.hero-stats-row{display:flex;gap:44px;flex-wrap:wrap;margin-top:32px}
+.h-stat{display:flex;flex-direction:column;align-items:flex-start;min-width:110px}
+.h-stat-icon{width:56px;height:56px;border-radius:16px;background:var(--white);box-shadow:0 4px 14px rgba(74,124,63,.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px;transition:transform .3s}
+.h-stat:hover .h-stat-icon{transform:translateY(-4px)}
+.h-stat-icon i{font-size:1.3rem;color:var(--g)}
+.h-stat .n{font-size:1.9rem;font-weight:900;color:var(--tx)}
+.h-stat .l{font-size:.72rem;color:var(--txs);font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-top:2px}
+@media(max-width:768px){
+  .hero-stats-row{gap:26px}
+  .h-stat{min-width:90px}
+}
+  
 /* ---- ABOUT ---- */
 #about{background:var(--bgw);padding:80px 0}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -661,14 +674,40 @@ footer{background:var(--gd);padding:32px 0 20px}
       <h2 class="sec-title">Real Work. Real Change.</h2>
       <p class="sec-sub">Community-driven projects by Sakha fellows creating visible impact across India.</p>
     </div>
-    <div class="impact-stats-row">
-      <div class="i-stat anim-up d1"><div class="n"><span class="counter" data-target="20">0</span>+</div><div class="l">Sessions</div></div>
-      <div class="i-stat anim-up d2"><div class="n"><span class="counter" data-target="40">0</span>+</div><div class="l">Meetups</div></div>
-      <div class="i-stat anim-up d3"><div class="n"><span class="counter" data-target="5">0</span>+</div><div class="l">Village Interventions</div></div>
-      <div class="i-stat anim-up d4"><div class="n"><span class="counter" data-target="5">0</span>+</div><div class="l">Unsung Heroes</div></div>
-      <div class="i-stat anim-up d5"><div class="n"><span class="counter" data-target="4">0</span>+</div><div class="l">Volunteering Initiatives</div></div>
-      <div class="i-stat anim-up d6"><div class="n"><span class="counter" data-target="1">0</span></div><div class="l">Residential Camp</div></div>
-    </div>
+
+    <div class="hero-stats-row">
+  <div class="h-stat">
+    <div class="h-stat-icon"><i class="fas fa-user-friends"></i></div>
+    <div class="n"><span class="counter" data-target="20">0</span>+</div>
+    <div class="l">Sessions</div>
+  </div>
+  <div class="h-stat">
+    <div class="h-stat-icon"><i class="fas fa-star"></i></div>
+    <div class="n"><span class="counter" data-target="40">0</span>+</div>
+    <div class="l">Meetups</div>
+  </div>
+  <div class="h-stat">
+    <div class="h-stat-icon"><i class="fas fa-map"></i></div>
+    <div class="n"><span class="counter" data-target="5">0</span>+</div>
+    <div class="l">Villages</div>
+  </div>
+   <div class="i-stat anim-up d4">
+    <div class="i-stat-icon"><i class="fas fa-user"></i></div>
+    <div class="n"><span class="counter" data-target="5">0</span>+</div>
+    <div class="l">Unsung Heroes</div>
+  </div>
+   <div class="i-stat anim-up d5">
+    <div class="i-stat-icon"><i class="far fa-heart"></i></div>
+    <div class="n"><span class="counter" data-target="4">0</span>+</div>
+    <div class="l">Initiatives</div>
+  </div>
+  <div class="h-stat">
+    <div class="h-stat-icon"><i class="fas fa-home"></i></div>
+    <div class="n"><span class="counter" data-target="1">0</span></div>
+    <div class="l">Residential Camp</div>
+  </div>
+</div>
+    
     <div class="impact-cards-grid">
       <div class="impact-card wide anim-left">
         <div class="impact-card-img g-c1"><img src="images/community.jpg" alt="community" style="width:100%; height:100%; object-fit:cover;"></div>
