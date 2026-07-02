@@ -218,11 +218,10 @@ img{max-width:100%;display:block;object-fit:cover}
 .i-stat .n{font-size:1.8rem;font-weight:900;color:var(--gd)}
 .i-stat .l{font-size:.75rem;color:var(--txs);font-weight:500;margin-top:2px}
 .impact-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
-.impact-card{border-radius:var(--r);overflow:hidden;height:200px;position:relative;cursor:pointer}
+.impact-card{border-radius:var(--r);overflow:hidden;height:200px;position:relative;cursor:pointer;display:block}
 .impact-card-img{width:100%;height:100%;background:linear-gradient(135deg,#7aad6e,#2e5226);display:flex;align-items:center;justify-content:center;font-size:3rem;transition:transform .4s}
 .impact-card:hover .impact-card-img{transform:scale(1.05)}
 .impact-card-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:.8rem;font-weight:700;padding:20px 14px 12px}
-.impact-card.wide{grid-column:span 2}
 
 /* ---- TESTIMONIAL / GREEN BAND ---- */
 #testi{background:var(--g);padding:60px 0}
@@ -743,28 +742,32 @@ footer{background:var(--gd);padding:32px 0 20px}
   </div>
 </div>
     
-    <div class="impact-cards-grid">
-      <div class="impact-card wide anim-left">
-        <div class="impact-card-img g-c1"><img src="images/community.jpg" alt="community" style="width:100%; height:100%; object-fit:cover;"></div>
-        <div class="impact-card-label">Community Development</div>
-      </div>
-      <div class="impact-card anim-right">
-        <div class="impact-card-img g-c4"><img src="images/prashantsir.jpg" alt="prashantsir" style="width:100%; height:100%; object-fit:cover;"></div>
-        <div class="impact-card-label">Unsung Hero </div>
-      </div>
-      <div class="impact-card anim-up d1">
-        <div class="impact-card-img g-c2"><img src="images/volunteering.jpg" alt="volunteering" style="width:100%; height:100%; object-fit:cover;"></div>
-        <div class="impact-card-label">Volunteering</div>
-      </div>
-      <div class="impact-card anim-up d2">
-        <div class="impact-card-img g-c3"><img src="images/survey.jpg" alt="survey" style="width:100%; height:100%; object-fit:cover;"></div>
-        <div class="impact-card-label">Village Interventions</div>
-      </div>
-      <div class="impact-card anim-up d3">
-        <div class="impact-card-img g-c5"><img src="images/camp.jpg" alt="camp" style="width:100%; height:100%; object-fit:cover;"></div>
-        <div class="impact-card-label">Youth Campaigns</div>
-      </div>
-    </div>
+   <div class="impact-cards-grid">
+  <a href="unsung-heroes.html" class="impact-card anim-left">
+    <div class="impact-card-img g-c1"><img src="images/community.jpg" alt="community" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Community Development</div>
+  </a>
+  <a href="unsung-heroes.html" class="impact-card anim-right">
+    <div class="impact-card-img g-c4"><img src="images/prashantsir.jpg" alt="prashantsir" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Unsung Hero</div>
+  </a>
+  <a href="impact.html#meetups" class="impact-card anim-right">
+    <div class="impact-card-img g-c6"><img src="images/community.jpg" alt="meetups" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Meetups</div>
+  </a>
+  <a href="impact.html#volunteering" class="impact-card anim-up d1">
+    <div class="impact-card-img g-c2"><img src="images/volunteering.jpg" alt="volunteering" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Volunteering</div>
+  </a>
+  <a href="impact.html#village-interventions" class="impact-card anim-up d2">
+    <div class="impact-card-img g-c3"><img src="images/survey.jpg" alt="survey" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Village Interventions</div>
+  </a>
+  <a href="impact.html#sessions" class="impact-card anim-up d3">
+    <div class="impact-card-img g-c5"><img src="images/camp.jpg" alt="camp" style="width:100%; height:100%; object-fit:cover;"></div>
+    <div class="impact-card-label">Youth Campaigns</div>
+  </a>
+</div>
   </div>
 </section>
 
