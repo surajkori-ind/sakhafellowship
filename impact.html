@@ -135,6 +135,11 @@ img{max-width:100%;display:block;object-fit:cover}
 .track-img-wrap{border-radius:var(--rl);overflow:hidden;height:360px;position:relative}
 .track-img{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:4rem;transition:transform .4s}
 .track-img-wrap:hover .track-img{transform:scale(1.04)}
+.track-slides{display:flex;height:100%;transition:transform .7s cubic-bezier(.22,.68,0,1.2)}
+.track-slides img{flex:0 0 100%;width:100%;height:100%;object-fit:cover}
+.track-dots{position:absolute;bottom:16px;right:16px;display:flex;gap:6px;z-index:3}
+.track-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;border:none;padding:0;transition:all .3s}
+.track-dot.active{background:#fff;width:18px;border-radius:4px}
 .track-label{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:.85rem;font-weight:700;padding:30px 18px 14px}
 .track-num{position:absolute;top:16px;left:16px;background:rgba(255,255,255,.92);color:var(--gd);font-weight:900;font-size:.75rem;letter-spacing:.05em;padding:6px 12px;border-radius:50px;text-transform:uppercase}
 .track-meta{display:flex;gap:30px;margin:18px 0 24px}
@@ -269,28 +274,23 @@ footer{background:var(--gd);padding:32px 0 20px}
       <div class="i-stat anim-up d5"><div class="n"><span class="counter" data-target="4">0</span>+</div><div class="l">Volunteering Initiatives</div></div>
       <div class="i-stat anim-up d6"><div class="n"><span class="counter" data-target="1">0</span></div><div class="l">Residential Camp</div></div>
     </div>
-    <div class="impact-cards-grid" style="margin-bottom:20px">
-      <div class="impact-card wide anim-left">
-        <div class="impact-card-img g-c1"><img src="images/community.jpg" alt="community" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="impact-card-label">Community Development</div>
-      </div>
-      <div class="impact-card anim-right">
-        <div class="impact-card-img g-c4"><img src="images/prashantsir.jpg" alt="prashantsir" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="impact-card-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
-      </div>
-    </div>
-  </div>
+    
 </section>
 
 <!-- TRACK 01 -->
 <section class="track" id="unsung-heroes">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c4"><img src="images/prashantsir.jpg" alt="Unsung heroes" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 01</span>
-        <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
-      </div>
+      <div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Unsung Heroes</span>
         <h2 class="sec-title">The people behind the change</h2>
@@ -309,11 +309,16 @@ footer{background:var(--gd);padding:32px 0 20px}
 <section class="track" id="volunteering">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c2"><img src="images/volunteering.jpg" alt="Volunteering" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 02</span>
-        <div class="track-label">Volunteering</div>
-      </div>
+      <div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Volunteering</span>
         <h2 class="sec-title">Showing up, hands first</h2>
@@ -332,11 +337,16 @@ footer{background:var(--gd);padding:32px 0 20px}
 <section class="track" id="village-interventions">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c3"><img src="images/survey.jpg" alt="Village interventions" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 03</span>
-        <div class="track-label">Village Interventions</div>
-      </div>
+      <div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Village Interventions</span>
         <h2 class="sec-title">On-ground, in the villages</h2>
@@ -355,11 +365,16 @@ footer{background:var(--gd);padding:32px 0 20px}
 <section class="track" id="sessions">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c5"><img src="images/camp.jpg" alt="Sessions" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 04</span>
-        <div class="track-label">Sessions</div>
-      </div>
+<div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Sessions</span>
         <h2 class="sec-title">Learning that sticks</h2>
@@ -378,11 +393,16 @@ footer{background:var(--gd);padding:32px 0 20px}
 <section class="track" id="meetups">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c6"><img src="images/community.jpg" alt="Meetups" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 05</span>
-        <div class="track-label">Meetups</div>
-      </div>
+      <div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Meetups</span>
         <h2 class="sec-title">Where fellows reconnect</h2>
@@ -401,11 +421,16 @@ footer{background:var(--gd);padding:32px 0 20px}
 <section class="track" id="residential-camps">
   <div class="container">
     <div class="track-grid">
-      <div class="track-img-wrap anim-left">
-        <div class="track-img g-c1"><img src="images/camp.jpg" alt="Residential camps" style="width:100%;height:100%;object-fit:cover;"></div>
-        <span class="track-num">Track 06</span>
-        <div class="track-label">Residential Camp</div>
-      </div>
+     <div class="track-img-wrap anim-left" data-track-slider>
+  <div class="track-slides">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/prashantsir.jpg" alt="Unsung Hero">
+    <img src="images/community.jpg" alt="Unsung Hero">
+  </div>
+  <span class="track-num">Track 01</span>
+  <div class="track-label">Unsung Hero - Mr. Prashant Vaidya(sir)</div>
+  <div class="track-dots"></div>
+</div>
       <div class="anim-up">
         <span class="tag">Residential Camps</span>
         <h2 class="sec-title">A week that changes everything</h2>
